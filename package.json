@@ -1,17 +1,12 @@
 {
-  "name": "forever",
+  "name": "evented-forever",
   "preferGlobal": "true",
-  "description": "A simple CLI tool for ensuring that a given node script runs continuously (i.e. forever)",
-  "version": "0.10.11",
-  "author": "Nodejitsu Inc. <info@nodejitsu.com>",
-  "maintainers": [
-    "indexzero <charlie@nodejitsu.com>",
-    "mmalecki <maciej@nodejitsu.com>",
-    "avianflu <charlie@charlieistheman.com>"
-  ],
+  "description": "Forever CLI extended with catchable events",
+  "version": "0.0.1",
+  "author": "Jie <contact@jie.fr>",
   "repository": {
     "type": "git",
-    "url": "http://github.com/nodejitsu/forever.git"
+    "url": "https://github.com/jiem/forever"
   },
   "keywords": [
     "cli",

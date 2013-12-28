@@ -19,8 +19,20 @@ function writePid(file, pid) {
 // Starts the child process and disconnects from the IPC channel.
 //
 function start(options) {
+  
   var script = process.argv[2],
-      monitor = new forever.Monitor(script, options);
+      monitor = new forever.Monitor(script, options),
+      events = ['error', 'start', 'stop', 'restart', 'exit', 'stdout', 'stderr'],      
+      listeners, e;
+        
+  if (options.eventFile) {
+    try {
+      listeners = require(path.resolve(options.eventFile));
+      for (e in listeners)
+        if (events.indexOf(e) !== -1)
+          monitor.on(e, listeners[e]);
+    } catch (err) {}
+  }
 
   forever.logEvents(monitor);
   monitor.start();

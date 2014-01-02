@@ -1,7 +1,7 @@
 {
   "name": "evented-forever",
   "preferGlobal": "true",
-  "description": "Forever CLI extended with catchable events",
+  "description": "Forever CLI extended with an \"--eventFile\" option to catch events (stop, restart...) through a file with listeners",
   "version": "0.0.1",
   "author": "Jie <contact@jie.fr>",
   "repository": {

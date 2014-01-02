@@ -31,7 +31,7 @@ Then create a file `sendMailOnRestart.js` with listeners:
       to: 'you@gmail.com',
       subject: 'Your app has crashed',
       text: 'Go fix your app!'
-		});
+    });
   }
 ```
 
